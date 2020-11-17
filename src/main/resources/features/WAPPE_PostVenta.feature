@@ -1,6 +1,6 @@
 Feature: WAPPE POST VENTA
 
- @Wappe_Flujo1 @Flujo1Flujo2
+ @Wappe_Flujo1 @Regresion
   Scenario Outline: Flujo1
     Given Se ingresa a la url de Wappe cliente "<caso_prueba>"
     When Se ingresan las credenciales y clic en ingresar "<caso_prueba>"
@@ -22,7 +22,7 @@ Feature: WAPPE POST VENTA
       |           2 |
 
 
-  @Wappe_Flujo2 @Flujo1Flujo2
+  @Wappe_Flujo2 @Regresion
   Scenario Outline: Flujo2
     Given Se ingresa a la url de Wappe agente "<caso_prueba>"
     When Se ingresan las credenciales de agente y clic en ingresar "<caso_prueba>"
