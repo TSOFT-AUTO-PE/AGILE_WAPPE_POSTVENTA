@@ -100,10 +100,7 @@ public class WappePageAgente extends BaseClass {
 
     public void seleccionarDispositivos() throws Exception {
         try {
-            while (driver.findElement(IMG_ESPERAR).isDisplayed()){
-                sleep(1000);
-            }
-            sleep(2000);
+            sleep(10000);
             click(driver, TAB_MOVILES);
             scroll(driver,0, 400);
             sleep(10000);
