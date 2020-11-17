@@ -2,7 +2,7 @@ package com.tsoft.bot.frontend.pages.objects;
 
 public class ExcelDataObjects {
 
-    public static final String EXCEL_WEB = "excel/wappe_login.xlsx";
+    public static final String EXCEL_WEB = "excel/TDP_WAPPE/wappe_login.xlsx";
     public static final String WAPPE_WEB = "CLIENTE";
     public static final String WAPPE_WEB1 = "WAPPE1";
     public static final String WAPPE_WEB2 = "AGENTE";
