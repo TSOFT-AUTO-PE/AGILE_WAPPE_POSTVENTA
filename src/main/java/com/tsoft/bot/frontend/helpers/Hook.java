@@ -106,6 +106,7 @@ public class Hook extends Listener {
 		onFinish();
 
 		generateWord.endToWord(scenario.getStatus());
+		driver.close();
 
 	}
 
