@@ -44,7 +44,7 @@ public class LoginPage extends BaseClass {
             String url = getData().get(wappe).get(COLUMNA_URL);
             driver.get(url);
             stepPass(driver, "Se inició correctamente la página del Cliente");
-            System.out.println("Se inició correctamente la página del Cliente");
+            System.out.println("[LOG] Se inició correctamente la página del Cliente");
             generateWord.sendText("Se inició correctamente la página del Cliente");
             generateWord.addImageToWord(driver);
         } catch (Exception we) {
@@ -60,7 +60,7 @@ public class LoginPage extends BaseClass {
             typeText(driver, TXT_DOC, doc);
             typeText(driver, TXT_PASS, pass);
             stepPass(driver, "Se ingresa el documento: " + doc + " Contraseña: " + pass + " y clic en el botón Ingresar");
-            System.out.println("Se ingresa el documento: " + doc + " Contraseña: " + pass + " y clic en el botón Ingresar");
+            System.out.println("[LOG] Se ingresa el documento: " + doc + " Contraseña: " + pass + " y clic en el botón Ingresar");
             generateWord.sendText("Se ingresa el documento: " + doc + " Contraseña: " + pass + " y clic en el botón Ingresar");
             generateWord.addImageToWord(driver);
             click(driver, BTN_ACEPTAR);
@@ -75,13 +75,13 @@ public class LoginPage extends BaseClass {
             if (driver.findElement(BTN_OPCIONES).isDisplayed())
             {
                 stepPass(driver, "Se verifica el login correcto");
-                System.out.println("Se verifica el login correcto");
+                System.out.println("[LOG] Se verifica el login correcto");
                 generateWord.sendText("Se verifica el login correcto");
                 generateWord.addImageToWord(driver);
             }
             else {
                 stepFail(driver, "Error en inicio de sesión");
-                System.out.println("Error en inicio de sesión");
+                System.out.println("[LOG] Error en inicio de sesión");
                 generateWord.sendText("Error en inicio de sesión");
                 generateWord.addImageToWord(driver);
             }
@@ -96,7 +96,7 @@ public class LoginPage extends BaseClass {
             String url = getData1().get(wappe).get(COLUMNA_URL);
             driver.get(url);
             stepPass(driver, "Se inició correctamente la página del Agente");
-            System.out.println("Se inició correctamente la página del Agente");
+            System.out.println("[LOG] Se inició correctamente la página del Agente");
             generateWord.sendText("Se inició correctamente la página del Agente");
             generateWord.addImageToWord(driver);
         } catch (Exception we) {
@@ -112,7 +112,7 @@ public class LoginPage extends BaseClass {
             typeText(driver, TXT_DOC, doc);
             typeText(driver, TXT_PASS, pass);
             stepPass(driver, "Se ingresa el documento: " + doc + " Contraseña: " + pass + " y clic en el botón Ingresar");
-            System.out.println("Se ingresa el documento: " + doc + " Contraseña: " + pass + " y clic en el botón Ingresar");
+            System.out.println("[LOG] Se ingresa el documento: " + doc + " Contraseña: " + pass + " y clic en el botón Ingresar");
             generateWord.sendText("Se ingresa el documento: " + doc + " Contraseña: " + pass + " y clic en el botón Ingresar");
             generateWord.addImageToWord(driver);
             click(driver, BTN_ACEPTAR);
@@ -127,13 +127,13 @@ public class LoginPage extends BaseClass {
             if (driver.findElement(BTN_EMPRESAS).isDisplayed())
             {
                 stepPass(driver, "Se verifica el login correcto");
-                System.out.println("Se verifica el login correcto");
+                System.out.println("[LOG] Se verifica el login correcto");
                 generateWord.sendText("Se verifica el login correcto");
                 generateWord.addImageToWord(driver);
             }
             else {
                 stepFail(driver, "Error en inicio de sesión");
-                System.out.println("Error en inicio de sesión");
+                System.out.println("[LOG] Error en inicio de sesión");
                 generateWord.sendText("Error en inicio de sesión");
                 generateWord.addImageToWord(driver);
             }
@@ -145,7 +145,7 @@ public class LoginPage extends BaseClass {
     private void casoFallido(Exception we) throws Exception {
         ExcelReader.writeCellValue(EXCEL_WEB, WAPPE_WEB, 1, 25, "FAIL");
         stepFail(driver, "Fallo el caso de prueba : " + we.getMessage());
-        System.out.println("Fallo el caso de prueba : " + we.getMessage());
+        System.out.println("[LOG] Fallo el caso de prueba : " + we.getMessage());
         generateWord.sendText("Tiempo de espera ha excedido");
         generateWord.addImageToWord(driver);
     }
