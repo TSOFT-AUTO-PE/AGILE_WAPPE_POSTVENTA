@@ -148,7 +148,7 @@ public class WappePageAgente extends BaseClass {
         try {
             click(driver, IMG_BUSQUEDA_PRODUCTO);
             sleep(10000);
-            if (driver.findElement(TXT_RAZON_SOCIAL).getText().equals("")){
+            if (driver.findElement(TXT_BUSQUEDA_PRODUCTO).getText().equals("")){
                 stepPass(driver, "Se valida la limpieza del filtro");
                 System.out.println("[LOG] Se valida la limpieza del filtro");
                 generateWord.sendText("Se valida la limpieza del filtro");
