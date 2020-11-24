@@ -24,12 +24,14 @@ import static com.tsoft.bot.frontend.base.BaseClass.stepFailNoShoot;
 
 public class Hook extends Listener {
 
-	private static final String GECKO_KEY 		= "webdriver.gecko.driver";
-	private static final String GECKO_DRIVER 	= "/src/main/resources/driver/firefox/0.26/geckodriver.exe";
-	private static final String CHROME_KEY 		= "webdriver.chrome.driver";
-	private static final String CHROME_DRIVER 	= "/src/main/resources/driver/chrome/85.0/chromedriver.exe";
-	private static final String IE_KEY 			= "webdriver.ie.driver";
-	private static final String IE_DRIVER 		= "/src/main/resources/driver/ie/3.5/IEDriverServer.exe";
+	private static final String GECKO_KEY 					= "webdriver.gecko.driver";
+	private static final String GECKO_DRIVER 				= "/src/main/resources/driver/firefox/0.26/geckodriver.exe";
+	private static final String CHROME_KEY 					= "webdriver.chrome.driver";
+	private static final String CHROME_DRIVER_Windows 		= "/src/main/resources/driver/chrome.87/chromedriver.exe";
+	private static final String CHROME_DRIVER_Mac 			= "/src/main/resources/driver/mac/chromedriver";
+	private static final String CHROME_DRIVER_Linux 		= "/src/main/resources/driver/linux/chromedriver";
+	private static final String IE_KEY 						= "webdriver.ie.driver";
+	private static final String IE_DRIVER 					= "/src/main/resources/driver/ie/3.5/IEDriverServer.exe";
 	private static final long DELAY = 10;
 	private static WebDriver driver;
 	private static Screen screen;
@@ -61,7 +63,7 @@ public class Hook extends Listener {
 					driver = new InternetExplorerDriver(options);
 					break;
 				case "Chrome":
-					System.setProperty(CHROME_KEY, FileHelper.getProjectFolder() + CHROME_DRIVER);
+					System.setProperty(CHROME_KEY, FileHelper.getProjectFolder() + CHROME_DRIVER_Linux);
 					System.setProperty("webdriver.chrome.silentOutput", "true");
 					ChromeOptions chromeOptions = new ChromeOptions();
 					chromeOptions.addArguments(

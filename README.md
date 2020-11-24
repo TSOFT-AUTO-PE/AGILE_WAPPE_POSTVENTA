@@ -1,4 +1,3 @@
-PLAZA VEA : Agregar productos al carrito
+TDP: WAPPE POST VENTA
 =========================
-Automatización de casos de prueba de regresión "Agregar Productos a Carrito Plaza Vea"
-
+Automatización de casos de prueba
