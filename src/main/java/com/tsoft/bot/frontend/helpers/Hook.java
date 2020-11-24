@@ -31,7 +31,7 @@ public class Hook extends Listener {
 	private static final String CHROME_DRIVER_Mac 			= "/src/main/resources/driver/mac/chromedriver";
 	private static final String CHROME_DRIVER_Linux 		= "/src/main/resources/driver/linux/chromedriver";
 	private static final String IE_KEY 						= "webdriver.ie.driver";
-	private static final String IE_DRIVER 					= "/src/main/resources/driver/ie/3.5/IEDriverServer.exe";
+	private static final String IE_DRIVER 	  				= "/src/main/resources/driver/ie/3.5/IEDriverServer.exe";
 	private static final long DELAY = 10;
 	private static WebDriver driver;
 	private static Screen screen;
